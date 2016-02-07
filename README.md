@@ -7,7 +7,7 @@ The Boilerplate building static sites with [harp](http://harpjs.com/) and publis
 ```
 $ git clone
 $ mkdir your_static_site
-$ cp -r harp-ghpages-boilerplate/{src,package.json,.gitignore} your_static_site/
+$ cp -r harp-gh-pages-boilerplate/{src,bin,package.json,.gitignore} your_static_site/
 $ cd your_static_site
 $ npm install
 $ npm run preview # And open localhost:9000 on your browser
