@@ -1,6 +1,6 @@
 # harp-gh-pages-boilerplate
 
-The Boilerplate building static sites with [harp](http://harpjs.com/) and publishing to [GitHub Pages](https://pages.github.com/) with [gh-pages npm](https://github.com/tschaub/gh-pages)
+The Boilerplate building static sites with [Harp](http://harpjs.com/) and publishing to [GitHub Pages](https://pages.github.com/) with [gh-pages npm](https://github.com/tschaub/gh-pages)
 
 ## Installation
 
@@ -20,6 +20,8 @@ $ npm run preview # And open localhost:9000 on your browser
 ```
 $ npm run compile
 ```
+
+You can get compiled files in `dist` directory.
 
 ### Launch preview server on `localhost:9000`
 
