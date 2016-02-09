@@ -36,3 +36,13 @@ You should initialize yoru project dir as a repository of GitHub at first.
 ```
 $ npm run publish
 ```
+
+#### Deployment with Circle CI
+
+```
+$ mv circle.yml{.sample,}
+$ vim circle.yml # Edit git config variables
+$ mv src/circle.yml{.sample,}
+```
+
+And configure your repository in Circle CI **with writable SSH key**.

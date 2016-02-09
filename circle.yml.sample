@@ -1,0 +1,30 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+
+machine:
+  timezone: Asia/Tokyo
+  node:
+    version: 5.1.0
+
+dependencies:
+  cache_directories:
+    - sassc
+    - libsass
+  post:
+    - if [[ ! -e sassc ]]; then git clone git@github.com:sass/sassc.git sassc; fi
+    - if [[ ! -e libsass ]]; then git clone --recursive git@github.com:sass/libsass.git && cd sassc && export SASS_LIBSASS_PATH=$(readlink -f ../libsass) && make && cd ..; fi
+    - ln -s sassc/bin/sassc ~/bin/sassc 
+
+test:
+  override:
+    - npm run compile
+
+deployment:
+  publish:
+    branch: master
+    commands:
+      - git config --global user.name "CircleCI Deployment"
+      - git config --global user.email "harp-gh-pages-boilerplate@example.com"
+      - npm run publish
