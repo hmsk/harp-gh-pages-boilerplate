@@ -2,9 +2,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "preview": "harp server src",
-    "compile": "harp compile src dist",
-    "publish": "npm run compile && bin/publish"
+    "preview": "$(npm bin)/harp server src",
+    "compile": "npm run clean && $(npm bin)/harp compile src dist",
+    "publish": "npm run compile && bin/publish",
+    "clean": "rm -rf ./dist"
   },
   "devDependencies": {
     "harp": "^0.20.0",
