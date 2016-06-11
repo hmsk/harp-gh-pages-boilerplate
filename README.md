@@ -7,7 +7,7 @@ The Boilerplate building static sites with [Harp](http://harpjs.com/) and publis
 ```
 $ git clone
 $ mkdir your_static_site
-$ cp -r harp-gh-pages-boilerplate/{src,bin,package.json,.gitignore} your_static_site/
+$ cp -r harp-gh-pages-boilerplate/{src,bin,package.json,.gitignore,.circle.yml.sample} your_static_site/
 $ cd your_static_site
 $ npm install
 $ npm run preview # And open localhost:9000 on your browser
@@ -42,7 +42,7 @@ $ npm run publish
 ```
 $ mv circle.yml{.sample,}
 $ vim circle.yml # Edit git config variables
-$ mv src/circle.yml{.sample,}
+$ mv src/circle.yml{.sample,} # For ignoring to build when pushed to gh-pages branch
 ```
 
 And configure your repository in Circle CI **with writable SSH key**.
